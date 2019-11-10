@@ -1,0 +1,43 @@
+
+body { 
+	margin:0;
+}
+#list > div {
+	height:2em;
+	line-height:2em;
+	border-bottom:1px solid #ddd;
+	overflow:hidden;
+}
+#audio {
+	position:fixed;
+	bottom:0;
+	width:100%; 
+}
+#audio:focus{
+	outline: thin dotted;
+}
+
+#list {
+	margin:0 16px 80px 16px;
+}
+.folder{
+	font-weight:bold;
+}
+.file{
+	cursor:pointer;
+	padding-left:1em;
+}
+.active {
+	background:#efe;
+}
+.buddy {
+	display:inline-block;
+	width:2em;
+	text-align:center;
+	border-radius:50%;
+	background: #373;
+	color:#fff;
+}
+.active > .buddy:before {
+	content: '⬇'
+}

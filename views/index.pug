@@ -1,0 +1,15 @@
+html
+	head
+		title= title
+		link(href='/styles.css', rel='stylesheet')
+		script(src='/script.js', type='text/javascript')
+	body
+		div(id='list')
+			each item in items
+				if item.file
+					div(data-path=item.path, onClick="play(this)")
+						span(class="buddy" data-path=item.download, onClick="download(this)")
+						span(class="file")= item.file
+				else
+					div(class="folder")= item.path
+		audio(id="audio" controls="on" autoplay="true")
